@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectMapFeature action should set selectedFeature 1`] = `
+Object {
+  "features": Array [],
+  "selectedFeature": Object {
+    "geometry": Object {
+      "coordinates": Array [
+        10.263290405273438,
+        56.17155205794858,
+      ],
+      "type": "Point",
+    },
+    "type": "Feature",
+  },
+}
+`;

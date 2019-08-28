@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserComponent should render user info 1`] = `
+<workshop-user
+  user={[Function Object]}
+>
+  <span>
+    Kevin
+  </span><span>
+    Frontender
+  </span>
+</workshop-user>
+`;
