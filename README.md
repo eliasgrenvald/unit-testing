@@ -74,7 +74,7 @@ test('should add a product to the shopping cart', () => {
 ## Test a Single Concern at a Time
 - Do not assess multiple things in a single unit test.
 - Test only one concern of a bigger picture.
-- Once ‘expect’ on each ‘it’
+- Once ‘expect’ on each ‘test’
 - Facilitates the debugging when test fails, you exactly know what has failed.
 
 ### Bad
@@ -102,17 +102,19 @@ describe(‘getProduct function', ()=> {
 - Keep it DRY
 ### Bad
 ```js
+let cacheService;
+let productService;
 describe('getProductName', () => {
  test('should get production name by id', () => {
-     let cacheService = new cacheService();
-     let productService = new ProductService(cacheService);
+     cacheService = new cacheService();
+     productService = new ProductService(cacheService);
      productService.addProduct({ id: 72, name: 'dinning chair'};
   
      expect(productService.getProductName(72)).toBe('dinning chair');
  });
  test('should return null if the id does not exist', () => {
-     let cacheService = new cacheService();
-     let productService = new ProductService(cacheService);
+     cacheService = new cacheService();
+     productService = new ProductService(cacheService);
   
      expect(productService.getProductName(100)).toBeNull();
  });     
@@ -120,10 +122,12 @@ describe('getProductName', () => {
 ```
 ### Good
 ```js
+let cacheService;
+let productService;
 describe('getProductName', () => {
  beforeEach(() => {
-   let cacheService = new cacheService();
-   let productService = new ProductService(cacheService);
+   cacheService = new cacheService();
+   productService = new ProductService(cacheService);
  });
 
  test('should get production name by id', () => {
