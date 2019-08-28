@@ -26,7 +26,7 @@ describe('loadProducts', () => {
 ### Good Naming
 
 ```js
-describe('invoke the loadProducts function', () => {
+describe('loadProducts', () => {
   test('should reset the filters', () => {
       // ...
   });
