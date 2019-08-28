@@ -67,8 +67,9 @@ test('should add a product to the shopping cart', () => {
 ### Good
 ```js
 test('should add a product to the shopping cart', () => {
-  shoppingCart.addProduct('dinning chair', 2, 200);
-  expect(shoppingCart.isProductExist('dinning chair', 2, 200)).toBe(true);
+  shoppingCart.addProduct(10, 'dinning chair', 2, 200);
+  expect(shoppingCart.getProduct(10))
+    .toMatchObject({ id: 10, name: 'dinningChair', quantity: 2, price: 200 });
 });
 ```
 ## Test a Single Concern at a Time
