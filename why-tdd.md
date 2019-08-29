@@ -1,7 +1,6 @@
-<div align="center" markdown="1">
-  <h1>Why TDD?</h1>
-  <img src="https://miro.medium.com/max/950/1*IbHgZrKYCUSeIbL_PywObQ.png">
-</div>
+# Why TDD?
+
+<img src="https://miro.medium.com/max/950/1*IbHgZrKYCUSeIbL_PywObQ.png">
 
 # Why TDD?
 - We write the test before a single line of implementation code is written
@@ -17,4 +16,4 @@
 - Higher quality software.
 
 ## Pitfall
-Longer development time of course.
+It takes longer in the short run
