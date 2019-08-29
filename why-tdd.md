@@ -1,4 +1,8 @@
-<img src="https://miro.medium.com/max/950/1*IbHgZrKYCUSeIbL_PywObQ.png">
+<div align="center" markdown="1">
+  <h1>Why TDD?</h1>
+  <img src="https://miro.medium.com/max/950/1*IbHgZrKYCUSeIbL_PywObQ.png">
+</div>
+
 # Why TDD?
 - We write the test before a single line of implementation code is written
 - That test will serve as a guideline what to build and to make sure we don’t break anything in the future that prevents the regular flow from working. Basically the test is some way of documenting the code.
