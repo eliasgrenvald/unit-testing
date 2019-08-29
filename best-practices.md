@@ -6,7 +6,9 @@
 - [One Single Initialization](#One-Single-Initialization)
 - [Mock Any External Resources](#Mock-Any-External-Resources)
 
-## Naming
+---
+
+# Naming
 
 - Concise
 - Descriptive
@@ -15,7 +17,9 @@
 - No punctuations ‘.’ in the end of the names
 - Do not capitalize the first letter in the first word in the name
 
-### Bad Naming
+---
+
+# Bad Naming
 
 ```js
 describe("loadProducts", () => {
@@ -25,7 +29,9 @@ describe("loadProducts", () => {
 });
 ```
 
-### Good Naming
+---
+
+# Good Naming
 
 ```js
 describe("loadProducts", () => {
@@ -38,20 +44,30 @@ describe("loadProducts", () => {
 });
 ```
 
+---
+
 ## Test The Behaviour ‘NOT’ Implementation
 
 - Internal implementation doesn’t matter. Use static code analysis or pull request for that.
 - Test behaviour and responsibilities of the unit that is being tested.
+
+---
+
 - Test should assess whether the output of a unit (function) is the same given the same input.
 - Don’t need to test and assess the private properties, or internal variables in the objects.
+
+---
+
 - Look at it as a black box
 - sum(2, 3) => 5
-  - The only thing that matters is to assess whether supplying ‘2’ and ‘3’ to the sum function will result in ‘5’ in the output and from the unit test point of view, it doesn’t really matter how sum internally calculates the output:
+- The only thing that matters is to assess whether supplying ‘2’ and ‘3’ to the sum function will result in ‘5’ in the output and from the unit test point of view, it doesn’t really matter how sum internally calculates the output:
+
   ```js
   const sum = (a, b) => {
     return a + b;
   };
   ```
+
   ```js
   const sum = (a, b) => {
     const d = 2 * (b / 2);
@@ -59,7 +75,9 @@ describe("loadProducts", () => {
   };
   ```
 
-### Bad
+---
+
+# Bad
 
 ```js
 test("should add a product to the shopping cart", () => {
@@ -73,7 +91,9 @@ test("should add a product to the shopping cart", () => {
 });
 ```
 
-### Good
+---
+
+# Good
 
 ```js
 test("should add a product to the shopping cart", () => {
@@ -87,14 +107,18 @@ test("should add a product to the shopping cart", () => {
 });
 ```
 
-## Test a Single Concern at a Time
+---
+
+# Test a Single Concern at a Time
 
 - Do not assess multiple things in a single unit test.
 - Test only one concern of a bigger picture.
 - Once ‘expect’ on each ‘test’
 - Facilitates the debugging when test fails, you exactly know what has failed.
 
-### Bad
+---
+
+# Bad
 
 ```js
 describe(‘getProduct function', ()=> {
@@ -105,7 +129,9 @@ describe(‘getProduct function', ()=> {
 });
 ```
 
-### Good
+---
+
+# Good
 
 ```js
 describe(‘getProduct function', ()=> {
@@ -118,12 +144,16 @@ describe(‘getProduct function', ()=> {
 });
 ```
 
-## One Single Initialization
+---
+
+# One Single Initialization
 
 - All initializations should go to beforeEach as a central initialization place.
 - Keep it DRY
 
-### Bad
+---
+
+# Bad
 
 ```js
 let cacheService;
@@ -145,7 +175,9 @@ describe('getProductName', () => {
 });
 ```
 
-### Good
+---
+
+# Good
 
 ```js
 let cacheService;
@@ -166,8 +198,12 @@ describe("getProductName", () => {
 });
 ```
 
+---
+
 ## Mock Any External Resources
 
-- Unit tests should be stateless
-- Unit tests must not change anything in the external resources or real world.
-- Other benefit is that tests run way faster in a mocked environment.
+### Unit tests should be stateless
+
+### Unit tests must not change anything in the external resources or real world.
+
+### Other benefit is that tests run way faster in a mocked environment.

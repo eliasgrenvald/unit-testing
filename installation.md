@@ -1,20 +1,7 @@
-# Jest installation with Angular
+# Installing Jest
 
-- [Installation using Angular](#Installation-using-Angular)
-
-## Installation using Angular
-
-```js
-npm install --save-dev jest-preset-angular
+```
+npm install jest
 ```
 
-### Add Jest configurtion in the package.json
-
-```js
-{
-  "jest": {
-    "preset": "jest-preset-angular",
-    "setupTestFrameworkScriptFile": "<rootDir>/setupJest.ts"
-  }
-}
-```
+---
