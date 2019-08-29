@@ -1,8 +1,11 @@
 import { TestBed } from '@angular/core/testing';
+import {
+  HttpClientTestingModule
+} from '@angular/common/http/testing';
 import { cold, hot } from 'jasmine-marbles';
 import { provideMockActions } from '@ngrx/effects/testing';
-import { LoadMapFeatures, LoadMapFeaturesSuccess, LOAD_MAP_FEATURES, LOAD_MAP_FEATURES_SUCCESS } from '../actions';
-import { Actions, EffectsModule } from '@ngrx/effects';
+import { LoadMapFeatures, LoadMapFeaturesSuccess } from '../actions';
+import { EffectsModule } from '@ngrx/effects';
 import { MapEffects } from './map.effect';
 import { MarkersService } from '../../services';
 import { StoreModule } from '@ngrx/store';
@@ -15,6 +18,7 @@ describe(`MapEffects`, () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({imports: [
+        HttpClientTestingModule,
 				StoreModule.forRoot({}),
 				EffectsModule.forRoot([MapEffects])
 			],
