@@ -1,14 +1,15 @@
 # Jest installation with Angular
-</div>
 
 - [Installation using Angular](#Installation-using-Angular)
 
 ## Installation using Angular
+
 ```js
 npm install --save-dev jest-preset-angular
 ```
 
 ### Add Jest configurtion in the package.json
+
 ```js
 {
   "jest": {
