@@ -189,6 +189,7 @@ describe("getProductName", () => {
   });
 
   test("should get production name by id", () => {
+    productService.addProduct({ id: 72, name: 'dinning chair'};
     expect(productService.getProductName(72)).toBe("dinning chair");
   });
 
