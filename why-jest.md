@@ -1,13 +1,25 @@
 # Benefits with Jest
 
-- it automatically isolates each test file
+- It automatically isolates each test file
   Meaning you don't have to worry about tests in files influencing other tests. That can happen with Mocha.
-- it looks at "git status"
-  it only runs the tests of files that has changed, that is awesome as it doesn't need to run the full testsuite the whole time
-- it has built in code-coverage
-  this is useful to see who much of a file you have tested and that is comes of the box is amazing
-- it has really great mocking functions
-  you can both create mock functions, but you can also overwrite require() so that you don't have to change the code
+- It looks at "git status"
+  it only runs the tests of files that has changed, that is awesome as it doesn't need to run the full testsuite the whole time.
+- It has built in code-coverage.
+  this is useful to see who much of a file you have tested and that is comes of the box is amazing.
+  ```js
+  jest --coverage
+  ```
+- It has really great mocking functions.
+  you can both create mock functions, but you can also overwrite require() so that you don't have to change the code.
+- Filter by a filename or test name regex pattern.
+- You can keep most of the Jasmine syntax because Jest includes most of the Jasmine API in addition to its own API.
+- Snapshot testing, a useful feature which is not available in Jasmine
+More active community which will make Jest even better, benefits with snapshot testing: 
+  - Compares expectation to the stored snapshot.
+  - Stores a snapshot if it doesn't exist.
+  - Perfoms diff on the snapshot.
+  - Easily update snapshots on refactor.
+
 
 
 ---
