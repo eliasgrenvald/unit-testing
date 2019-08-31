@@ -8,6 +8,8 @@
 npm install --save-dev jest-preset-angular
 ```
 
+---
+
 ### Add Jest configurtion in the package.json
 
 ```js
